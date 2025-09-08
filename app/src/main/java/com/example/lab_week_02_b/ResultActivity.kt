@@ -3,6 +3,7 @@ package com.example.lab_week_02_b
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -29,6 +30,10 @@ class ResultActivity : AppCompatActivity() {
             val errorIntent = Intent()
             errorIntent.putExtra(ERROR_KEY, true)
             setResult(Activity.RESULT_OK, errorIntent)
+            finish()
+        }
+
+        findViewById<Button>(R.id.back_button).setOnClickListener {
             finish()
         }
     }
